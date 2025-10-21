@@ -1,0 +1,191 @@
+@media (max-width: 900px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--onda-blue);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  nav ul.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .routes-controls {
+    grid-template-columns: 1fr 1fr;
+    padding: 0.9rem;
+  }
+  .routes-controls #clear {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+  }
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .timeline {
+    padding: 1.5rem 0;
+  }
+
+  .timeline::before {
+    left: 24px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding: 1.25rem 1rem 1.25rem 3.5rem;
+  }
+
+  .timeline-item::before {
+    left: 0 !important;
+    right: auto !important;
+    width: 56px;
+    height: 56px;
+    top: 12px;
+    font-size: 0.95rem;
+  }
+
+  .timeline-images img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  .bio-section {
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem 1rem;
+    display: block;
+  }
+
+  .bio-media {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .bio-media img {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    padding: 1rem 1rem 1rem 3.1rem;
+  }
+
+  .timeline-item::before {
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    font-size: 0.9rem;
+  }
+
+  .mini-timeline {
+    gap: 0.6rem;
+    padding: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  #lightbox .carousel {
+    max-width: 95%;
+  }
+
+  #prevBtn {
+    left: 4px;
+  }
+
+  #nextBtn {
+    right: 4px;
+  }
+
+  #closeBtn {
+    top: -40px;
+    right: 4px;
+  }
+
+  .routes-controls {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+  .routes-controls label {
+    font-size: 0.88rem;
+  }
+  .routes-controls input {
+    padding: 0.6rem 0.8rem;
+    font-size: 16px;
+  }
+  .routes-controls #clear {
+    padding: 0.6rem 0.9rem;
+    grid-column: auto;
+    justify-self: stretch;
+  }
+
+  .routes-wrap {
+    padding: 0 0.5rem;
+  }
+
+  .routes-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .routes-table {
+    min-width: 500px;
+  }
+
+  .routes-table thead th {
+    padding: 0.6rem 0.4rem;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    white-space: nowrap;
+  }
+
+  .routes-table tbody td {
+    padding: 0.5rem 0.4rem;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-frame {
+    aspect-ratio: auto;
+    min-height: 300px;
+  }
+
+  .quiz {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .opts button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .map {
+    height: auto;
+    width: 80% !important;
+  }
+}

@@ -1,0 +1,49 @@
+.bio-section {
+  max-width: 1200px;
+  margin: 2.5rem auto 1.5rem;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  background: var(--onda-white);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-media {
+  border-left: 6px solid var(--onda-blue);
+  border-radius: 10px;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-media img {
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+.bio-content h2 {
+  color: var(--onda-blue);
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+}
+
+.bio-content p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.bio-highlight {
+  margin-top: 0.75rem;
+  border-left: 4px solid var(--onda-light-blue);
+  background: var(--onda-gray);
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  color: #213042;
+}

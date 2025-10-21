@@ -1,0 +1,111 @@
+header {
+  background: var(--onda-blue);
+  color: var(--onda-white);
+  padding: 1rem 2rem;
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  background-image: url("../../images/ui/v.png");
+  height: 40px;
+  width: 100px;
+  background-size: contain;
+}
+
+.logo-secondary {
+  background-image: url("../../images/ui/logoESIb.png");
+  height: 45px;
+  width: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--onda-white);
+  text-decoration: none;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--onda-white);
+  transition: var(--transition);
+}
+
+nav a:hover::after,
+nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: var(--onda-white);
+  transition: var(--transition);
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  background: var(--onda-blue);
+  color: var(--onda-white);
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}

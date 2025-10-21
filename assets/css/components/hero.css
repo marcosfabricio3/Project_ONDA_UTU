@@ -1,0 +1,97 @@
+.hero {
+  background: url("../../images/ui/ondajpg.webp") center/cover no-repeat;
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: 50vh;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--onda-white);
+  position: relative;
+  filter: contrast(0.9) brightness(0.9);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.85));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--onda-white);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+
+.hero button {
+  background: var(--onda-white);
+  color: var(--onda-blue);
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero button:hover {
+  background: var(--onda-light-blue);
+  color: var(--onda-white);
+}
+
+.subhero {
+  background: url("../../images/ui/ondajpg.webp") center/cover no-repeat;
+  color: var(--onda-white);
+  width: 100%;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: 28vh;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.subhero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.85));
+}
+
+.subhero-content {
+  padding: 0 1rem;
+  z-index: 2;
+}
+
+.subhero h1 {
+  font-size: 2.4rem;
+  color: var(--onda-gray);
+  margin-bottom: 0.4rem;
+}
+
+.subhero p {
+  font-size: 1.15rem;
+  opacity: 0.95;
+}

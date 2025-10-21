@@ -1,0 +1,47 @@
+.routes-wrap {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.routes-table-wrap {
+  background: var(--onda-white);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.routes-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.routes-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--onda-white);
+  color: #0f172a;
+  text-align: left;
+  padding: 0.8rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border-bottom: 1px solid var(--onda-gray);
+}
+
+.routes-table tbody td {
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--onda-gray);
+  font-size: clamp(0.9rem, 2vw, 0.98rem);
+}
+
+.routes-table tbody tr:nth-child(odd) {
+  background: var(--onda-gray);
+}
+
+.routes-table tbody tr:hover {
+  background: var(--onda-light-blue);
+  color: var(--onda-white);
+}

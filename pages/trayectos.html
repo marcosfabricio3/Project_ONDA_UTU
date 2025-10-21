@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONDA | Routes</title>
+    <meta name="description" content="Discover and explore ONDA’s agencies and main routes across Uruguay"/>
+    <meta name="author" content="Gastón da Silva, Daniel Alvez, Marcos García"/>
+    <meta name="copyright" content="ONDA 2025" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../assets/css/layout/variables_reset.css" />
+    <link rel="stylesheet" href="../assets/css/components/hero.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar_footer.css" />
+    <link rel="stylesheet" href="../assets/css/components/filter.css" />
+    <link rel="stylesheet" href="../assets/css/components/tables.css" />
+    <link rel="stylesheet" href="../assets/css/layout/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/components/map.css" />
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/library/dist/leaflet.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="nav-container">
+        <div class="logo"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trayectos.html" aria-current="page">Routes</a></li>
+            <li><a href="juego.html">Game</a></li>
+          </ul>
+        </nav>
+        <div class="logo-secondary"></div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="subhero">
+      <div class="subhero-content">
+        <h1>Main Routes</h1>
+        <p>Journeys that made history in Uruguay</p>
+      </div>
+    </section>
+
+    <main class="">
+      <section class="map" aria-label="Map of Uruguay showing main routes">
+        <div id="map"></div>
+      </section>
+
+      <!-- Filters -->
+      <section class="routes-controls" id="filters">
+        <div>
+          <label for="fOrigen">Origin</label>
+          <input id="fOrigen" type="text" placeholder="E.g., Montevideo" />
+        </div>
+
+        <div>
+          <label for="fDestino">Destination</label>
+          <input id="fDestino" type="text" placeholder="E.g., Salto" />
+        </div>
+
+        <button id="clear" type="button">Clear</button>
+      </section>
+
+      <section class="routes-table-wrap">
+        <table class="routes-table">
+          <thead>
+            <tr>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Service Type</th>
+              <th>Approx. Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              data-origen-lat="-34.9053"
+              data-origen-lng="-56.1886"
+              data-destino-lat="-34.46317170814427"
+              data-destino-lng="-57.83222238941788"
+            >
+              <td>Montevideo</td>
+              <td>Colonia del Sacramento</td>
+              <td>direct route</td>
+              <td>2h–3h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.46317170814427"
+              data-origen-lng="-57.83222238941788"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Colonia del Sacramento</td>
+              <td>Montevideo</td>
+              <td>direct route</td>
+              <td>2h–3h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.9053"
+              data-origen-lng="-56.1886"
+              data-destino-lat="-33.530"
+              data-destino-lng="-58.216"
+            >
+              <td>Montevideo</td>
+              <td>Dolores</td>
+              <td>interdepartmental</td>
+              <td>3–4h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.9053"
+              data-origen-lng="-56.1886"
+              data-destino-lat="-32.32278035193446"
+              data-destino-lng="-58.04840044228739"
+            >
+              <td>Montevideo</td>
+              <td>Paysandú</td>
+              <td>long route</td>
+              <td>7–9h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.9053"
+              data-origen-lng="-56.1886"
+              data-destino-lat="-31.39788718727523"
+              data-destino-lng="-57.91262029301729"
+            >
+              <td>Montevideo</td>
+              <td>Salto</td>
+              <td>long route</td>
+              <td>8–10h</td>
+            </tr>
+            <tr
+              data-origen-lat="-30.401"
+              data-origen-lng="-56.471"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Artigas</td>
+              <td>Montevideo</td>
+              <td>long distance</td>
+              <td>10–12h</td>
+            </tr>
+            <tr
+              data-origen-lat="-33.67736397196703"
+              data-origen-lng="-54.21318852351945"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Lascano</td>
+              <td>Montevideo</td>
+              <td>interdepartmental</td>
+              <td>8–10h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.9053"
+              data-origen-lng="-56.1886"
+              data-destino-lat="-34.962"
+              data-destino-lng="-54.951"
+            >
+              <td>Montevideo</td>
+              <td>Punta del Este</td>
+              <td>resort/seasonal</td>
+              <td>2.5–3h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.495775720160275"
+              data-origen-lng="-54.32727133437804"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Rocha</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>4–6h</td>
+            </tr>
+            <tr
+              data-origen-lat="-32.633"
+              data-origen-lng="-55.600"
+              data-destino-lat="-32.36090195298994"
+              data-destino-lng="-56.26598132181075"
+            >
+              <td>San Gregorio de Polanco</td>
+              <td>Achar</td>
+              <td>regional</td>
+              <td>1–3h</td>
+            </tr>
+            <tr
+              data-origen-lat="-30.946836147627142"
+              data-origen-lng="-57.521818755989486"
+              data-destino-lat="-31.39788718727523"
+              data-destino-lng="-57.91262029301729"
+            >
+              <td>Termas del Arapey</td>
+              <td>Salto</td>
+              <td>tourist/thermal</td>
+              <td>1–2h</td>
+            </tr>
+            <tr
+              data-origen-lat="-32.32278035193446"
+              data-origen-lng="-58.04840044228739"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Paysandú</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>6–8h</td>
+            </tr>
+            <tr
+              data-origen-lat="-33.1313747318053"
+              data-origen-lng="-58.24128749973253"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Fray Bentos</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>6–8h</td>
+            </tr>
+            <tr
+              data-origen-lat="-33.24670638214617"
+              data-origen-lng="-58.01703834777126"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Mercedes</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>3–4h</td>
+            </tr>
+            <tr
+              data-origen-lat="-30.258289662839548"
+              data-origen-lng="-57.59161774103027"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Bella Unión</td>
+              <td>Montevideo</td>
+              <td>extended route</td>
+              <td>12–14h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.78774036310961"
+              data-origen-lng="-55.244927503681204"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Piriápolis</td>
+              <td>Montevideo</td>
+              <td>resort</td>
+              <td>1–2h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.48983133198974"
+              data-origen-lng="-54.32187270339405"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>La Paloma</td>
+              <td>Montevideo</td>
+              <td>resort/regional</td>
+              <td>3–5h</td>
+            </tr>
+            <tr
+              data-origen-lat="-33.530"
+              data-origen-lng="-58.216"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Dolores</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>3–4h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.33299091920096"
+              data-origen-lng="-57.28592819319695"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Nueva Helvecia</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>2–3h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.33708934849913"
+              data-origen-lng="-57.34017221956141"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Rosario</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>2–3h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.0009"
+              data-origen-lng="-58.2859"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Carmelo</td>
+              <td>Montevideo</td>
+              <td>regional</td>
+              <td>2–4h</td>
+            </tr>
+            <tr
+              data-origen-lat="-32.816"
+              data-origen-lng="-56.510"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Paso de los Toros</td>
+              <td>Montevideo</td>
+              <td>interdepartmental</td>
+              <td>6–8h</td>
+            </tr>
+            <tr
+              data-origen-lat="-33.379"
+              data-origen-lng="-56.523"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Durazno</td>
+              <td>Montevideo</td>
+              <td>interdepartmental</td>
+              <td>7–9h</td>
+            </tr>
+            <tr
+              data-origen-lat="-32.703262937009065"
+              data-origen-lng="-57.632733057182186"
+              data-destino-lat="-33.1313747318053"
+              data-destino-lng="-58.24128749973253"
+            >
+              <td>Young</td>
+              <td>Fray Bentos</td>
+              <td>regional</td>
+              <td>2–4h</td>
+            </tr>
+            <tr
+              data-origen-lat="-33.69969314366299"
+              data-origen-lng="-53.450175157240736"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Chuy</td>
+              <td>Montevideo</td>
+              <td>international/regional</td>
+              <td>8–12h</td>
+            </tr>
+            <tr
+              data-origen-lat="-34.962"
+              data-origen-lng="-54.951"
+              data-destino-lat="-34.9053"
+              data-destino-lng="-56.1886"
+            >
+              <td>Punta del Este</td>
+              <td>Montevideo</td>
+              <td>resort/international</td>
+              <td>2.5–3h</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>© 2025 ONDA - All rights reserved</footer>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/filters.js"></script>
+    <script src="../assets/js/map.js"></script>
+    <script src="../assets/library/dist/leaflet.js"></script>
+  </body>
+</html>

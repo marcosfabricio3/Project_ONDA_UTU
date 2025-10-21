@@ -1,0 +1,65 @@
+.routes-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 0.9rem;
+  align-items: end;
+  margin: 1rem;
+  padding: 0.95rem;
+  background: var(--onda-white);
+  border-radius: 12px;
+  border-left: 6px solid var(--onda-light-blue);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.routes-controls label {
+  font-size: 0.9rem;
+  color: #1f2f44;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+.routes-controls input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #d8dee6;
+  border-radius: 10px;
+  background: var(--onda-white);
+  color: #102033;
+  font-size: 1rem;
+  outline: none;
+}
+
+.routes-controls input:hover {
+  border-color: #c8d2df;
+}
+
+.routes-controls input:focus {
+  border-color: var(--onda-light-blue);
+  box-shadow: 0 0 0 3px rgba(0, 115, 207, 0.15);
+}
+
+.routes-controls #clear {
+  justify-self: end;
+  padding: 0.68rem 1rem;
+  border: 1px solid #d8dee6;
+  border-radius: 10px;
+  background: var(--onda-gold);
+  color: var(--onda-blue);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.routes-controls #clear:hover {
+  background: var(--onda-light-blue);
+  color: #fff;
+}
+
+.routes-controls #clear:active {
+  transform: translateY(1px);
+}
+
+/* separación con la tabla */
+.routes-controls + .routes-table-wrap {
+  margin-top: 0.4rem;
+}
